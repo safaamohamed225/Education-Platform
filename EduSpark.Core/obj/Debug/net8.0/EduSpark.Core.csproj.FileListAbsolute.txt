@@ -1,0 +1,14 @@
+D:\EducationApp\EduSpark.Core\bin\Debug\net8.0\EduSpark.Core.deps.json
+D:\EducationApp\EduSpark.Core\bin\Debug\net8.0\EduSpark.Core.runtimeconfig.json
+D:\EducationApp\EduSpark.Core\bin\Debug\net8.0\EduSpark.Core.dll
+D:\EducationApp\EduSpark.Core\bin\Debug\net8.0\EduSpark.Core.pdb
+D:\EducationApp\EduSpark.Core\obj\Debug\net8.0\EduSpark.Core.csproj.AssemblyReference.cache
+D:\EducationApp\EduSpark.Core\obj\Debug\net8.0\EduSpark.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\EducationApp\EduSpark.Core\obj\Debug\net8.0\EduSpark.Core.AssemblyInfoInputs.cache
+D:\EducationApp\EduSpark.Core\obj\Debug\net8.0\EduSpark.Core.AssemblyInfo.cs
+D:\EducationApp\EduSpark.Core\obj\Debug\net8.0\EduSpark.Core.csproj.CoreCompileInputs.cache
+D:\EducationApp\EduSpark.Core\obj\Debug\net8.0\EduSpark.Core.dll
+D:\EducationApp\EduSpark.Core\obj\Debug\net8.0\refint\EduSpark.Core.dll
+D:\EducationApp\EduSpark.Core\obj\Debug\net8.0\EduSpark.Core.pdb
+D:\EducationApp\EduSpark.Core\obj\Debug\net8.0\EduSpark.Core.genruntimeconfig.cache
+D:\EducationApp\EduSpark.Core\obj\Debug\net8.0\ref\EduSpark.Core.dll
