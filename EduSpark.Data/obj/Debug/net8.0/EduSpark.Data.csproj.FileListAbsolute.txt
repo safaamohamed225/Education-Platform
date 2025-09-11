@@ -17,3 +17,4 @@ D:\EducationApp\EduSpark.Data\obj\Debug\net8.0\refint\EduSpark.Data.dll
 D:\EducationApp\EduSpark.Data\obj\Debug\net8.0\EduSpark.Data.pdb
 D:\EducationApp\EduSpark.Data\obj\Debug\net8.0\EduSpark.Data.genruntimeconfig.cache
 D:\EducationApp\EduSpark.Data\obj\Debug\net8.0\ref\EduSpark.Data.dll
+D:\EducationApp\EduSpark.Data\obj\Debug\net8.0\EduSpark.Data.sourcelink.json

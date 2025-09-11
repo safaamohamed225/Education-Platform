@@ -1,3 +1,4 @@
+using EduSpark.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EduSpark.API.Controllers
@@ -12,22 +13,19 @@ namespace EduSpark.API.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly EduSparkDbContext _context;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, EduSparkDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        public IActionResult Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+           var courses = _context.Courses.ToList();
+            return Ok(courses);
         }
     }
 }

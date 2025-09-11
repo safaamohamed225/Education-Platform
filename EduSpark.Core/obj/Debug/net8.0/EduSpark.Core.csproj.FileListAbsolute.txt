@@ -12,3 +12,4 @@ D:\EducationApp\EduSpark.Core\obj\Debug\net8.0\refint\EduSpark.Core.dll
 D:\EducationApp\EduSpark.Core\obj\Debug\net8.0\EduSpark.Core.pdb
 D:\EducationApp\EduSpark.Core\obj\Debug\net8.0\EduSpark.Core.genruntimeconfig.cache
 D:\EducationApp\EduSpark.Core\obj\Debug\net8.0\ref\EduSpark.Core.dll
+D:\EducationApp\EduSpark.Core\obj\Debug\net8.0\EduSpark.Core.sourcelink.json

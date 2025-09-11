@@ -1,4 +1,7 @@
 
+using EduSpark.Data.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace EduSpark.API
 {
     public class Program
@@ -8,19 +11,27 @@ namespace EduSpark.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            var configuration = builder.Configuration;
+
+            builder.Services.AddDbContextPool<EduSparkDbContext>(options =>
+               {
+                   options.UseSqlServer(configuration.GetConnectionString("DBContext"),
+                       providerOptions=>providerOptions.EnableRetryOnFailure());
+
+               });
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            //builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
-                //app.UseSwagger();
-                //app.UseSwaggerUI();
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
 
             app.UseHttpsRedirection();
