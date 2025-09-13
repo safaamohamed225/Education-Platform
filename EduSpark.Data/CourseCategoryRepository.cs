@@ -1,5 +1,5 @@
-﻿using EduSpark.Core.Models;
-using EduSpark.Data.Models;
+﻿using EduSpark.Core.Entities;
+using EduSpark.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

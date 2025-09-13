@@ -19,7 +19,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\EduSpark.Core\EduSpark.Core.csproj" />
+		<ProjectReference Include="..\EduSpark.Core\EduSpark.Core.csproj" />
+		<ProjectReference Include="..\EduSpark.Data\EduSpark.Data.csproj" />
 	</ItemGroup>
 
 </Project>

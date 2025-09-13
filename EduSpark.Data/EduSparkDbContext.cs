@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using EduSpark.Core.Models;
+using EduSpark.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace EduSpark.Data.Models;
+namespace EduSpark.Data.Entities;
 
 public partial class EduSparkDbContext : DbContext
 {

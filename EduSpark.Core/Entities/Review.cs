@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace EduSpark.Core.Models;
+namespace EduSpark.Core.Entities;
 
 [Table("Review")]
 public partial class Review

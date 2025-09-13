@@ -9,6 +9,7 @@
       "EduSpark.Service/1.0.0": {
         "dependencies": {
           "EduSpark.Core": "1.0.0",
+          "EduSpark.Data": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.20",
           "Microsoft.EntityFrameworkCore.Design": "8.0.20",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.20",
@@ -1007,6 +1008,21 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "EduSpark.Data/1.0.0": {
+        "dependencies": {
+          "EduSpark.Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.20",
+          "Microsoft.EntityFrameworkCore.Design": "8.0.20",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.20",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.23.0-preview.4"
+        },
+        "runtime": {
+          "EduSpark.Data.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1584,6 +1600,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "EduSpark.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EduSpark.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

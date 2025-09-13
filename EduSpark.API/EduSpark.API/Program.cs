@@ -1,5 +1,7 @@
 
-using EduSpark.Data.Models;
+using EduSpark.Data;
+using EduSpark.Data.Entities;
+using EduSpark.Service;
 using Microsoft.EntityFrameworkCore;
 
 namespace EduSpark.API
@@ -24,6 +26,9 @@ namespace EduSpark.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddScoped<ICourseCategoryRepository, CourseCategoryRepository>();
+            builder.Services.AddScoped<ICourseCategoryService, CourseCategoryService>();
 
             var app = builder.Build();
 
