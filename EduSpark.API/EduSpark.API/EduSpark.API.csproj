@@ -28,8 +28,4 @@
     <ProjectReference Include="..\..\EduSpark.Service\EduSpark.Service.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>

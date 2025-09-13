@@ -12,6 +12,9 @@ namespace EduSpark.Service
         public async Task<CourseCategoryModel?> GetByIdAsync(int id)
         {
             var result = await _categoryRepository.GetByIdAsync(id);
+            if (result == null) 
+                return null;
+
             return new CourseCategoryModel()
             {
                 CategoryId = result.CategoryId,
