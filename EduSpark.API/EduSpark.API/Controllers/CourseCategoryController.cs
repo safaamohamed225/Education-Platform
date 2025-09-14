@@ -18,7 +18,7 @@ namespace EduSpark.API.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var result = await _courseCategoryService.GetByIdAsync(id);
+            var result = await _courseCategoryService.GetById(id);
 
             if(result == null)
             {
@@ -30,7 +30,7 @@ namespace EduSpark.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var result = await _courseCategoryService.GetCourseCategoriesAsync();
+            var result = await _courseCategoryService.GetCourseCategories();
             return Ok(result);
         }
     }
