@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace EduSpark.Service
 {
-    public interface ICourseCategoryService
+    public interface ICourseService
     {
-        Task<CourseCategoryModel?> GetById(int id);
-        Task<List<CourseCategoryModel>> GetCourseCategories();
+        Task<List<CourseModel>> GetAllCourses(int? categoryId = null);
+        Task<CourseDetailModel> GetCourseDetails(int courseId);
     }
 }

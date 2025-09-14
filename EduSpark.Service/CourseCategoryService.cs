@@ -9,7 +9,7 @@ namespace EduSpark.Service
         {
             _categoryRepository = categoryRepository;
         }
-        public async Task<CourseCategoryModel?> GetByIdAsync(int id)
+        public async Task<CourseCategoryModel?> GetById(int id)
         {
             var result = await _categoryRepository.GetByIdAsync(id);
             if (result == null) 
@@ -23,7 +23,7 @@ namespace EduSpark.Service
             };
         }
 
-        public async Task<List<CourseCategoryModel>> GetCourseCategoriesAsync()
+        public async Task<List<CourseCategoryModel>> GetCourseCategories()
         {
             var results = await _categoryRepository.GetCourseCategoriesAsync();
             
