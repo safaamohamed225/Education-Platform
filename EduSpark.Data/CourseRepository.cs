@@ -58,6 +58,10 @@ namespace EduSpark.Data
 
         public async Task<CourseDetailModel> GetCourseDetailsAsync(int courseId)
         {
+          if(courseId <= 0)
+            {
+                return null!;
+            }
             var courseDetails = await _context.Courses
                 .Include(c => c.Category)
                 .Include(c => c.Reviews)
