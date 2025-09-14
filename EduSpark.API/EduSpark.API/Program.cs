@@ -19,8 +19,9 @@ namespace EduSpark.API
                {
                    options.UseSqlServer(configuration.GetConnectionString("DBContext"),
                        providerOptions=>providerOptions.EnableRetryOnFailure());
-
-               });
+                   //options.EnableSensitiveDataLogging(true);
+               }
+               );
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
