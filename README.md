@@ -431,7 +431,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For support and questions:
 - Create an issue in this repository
-- Contact: safaa.mohamed.ibrahem@gmail.com
+- Contact: [Through Mail](safaa.mohamed.ibrahem@gmail.com)
 
 ## 🙏 Acknowledgments
 
