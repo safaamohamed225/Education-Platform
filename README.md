@@ -1,27 +1,69 @@
 # EduSpark - Learning Management System (LMS) API
 
+## 🚀 Technologies & Tools
+
+### 🖥️ Backend
 [![.NET](https://img.shields.io/badge/.NET-8.0-blue.svg)](https://dotnet.microsoft.com/)
+[![C#](https://img.shields.io/badge/C%23-Language-239120.svg)](https://learn.microsoft.com/en-us/dotnet/csharp/)
+[![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-9.0-blue.svg)](https://docs.microsoft.com/en-us/aspnet/core/)
+[![ASP.NET Core MVC](https://img.shields.io/badge/ASP.NET%20Core-MVC-purple.svg)](https://dotnet.microsoft.com/apps/aspnet/mvc)
+[![Web API](https://img.shields.io/badge/ASP.NET%20Core-Web%20API-lightblue.svg)](https://learn.microsoft.com/en-us/aspnet/core/web-api)
+[![Entity Framework Core](https://img.shields.io/badge/EF%20Core-8.0-green.svg)](https://docs.microsoft.com/en-us/ef/core/)
+[![LINQ](https://img.shields.io/badge/LINQ-Query-blue.svg)](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/)
+
+### 🗄️ Database
 [![SQL Server](https://img.shields.io/badge/SQL%20Server-2019+-red.svg)](https://www.microsoft.com/en-us/sql-server)
-[![Stripe](https://img.shields.io/badge/Stripe-API-purple.svg)](https://stripe.com/)
-[![Entity Framework Core](https://img.shields.io/badge/EF%20Core-8.0-green.svg)](https://docs.microsoft.com/en-us/ef/)
-[![Postman](https://img.shields.io/badge/Postman-API-orange.svg)](https://www.postman.com/)
-[![Swagger](https://img.shields.io/badge/Swagger-UI-yellow.svg)](https://swagger.io/)
-[![AutoMapper](https://img.shields.io/badge/AutoMapper-12.0-lightblue.svg)](https://automapper.org/)
-
-[![Serilog](https://img.shields.io/badge/Serilog-Logging-darkgreen.svg)](https://serilog.net/)
-[![SendGrid](https://img.shields.io/badge/SendGrid-Email-blue.svg)](https://sendgrid.com/)
-[![Health Check](https://img.shields.io/badge/Health%20Check-Healthy-brightgreen.svg)](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks)
-
-[![Azure](https://img.shields.io/badge/Azure-Cloud-0078d4.svg)](https://azure.microsoft.com/)
-[![Azure AD B2C](https://img.shields.io/badge/Azure%20AD%20B2C-Identity-0078d4.svg)](https://azure.microsoft.com/en-us/services/active-directory-b2c/)
 [![Azure SQL](https://img.shields.io/badge/Azure%20SQL-Database-0078d4.svg)](https://azure.microsoft.com/en-us/services/sql-database/)
 [![Azure Blob Storage](https://img.shields.io/badge/Azure%20Blob%20Storage-Storage-0078d4.svg)](https://azure.microsoft.com/en-us/services/storage/blobs/)
-[![Azure Functions](https://img.shields.io/badge/Azure%20Functions-Serverless-0078d4.svg)](https://azure.microsoft.com/en-us/services/functions/)
 
+### 🔐 Security & Auth
+[![ASP.NET Identity](https://img.shields.io/badge/ASP.NET-Identity-orange.svg)](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity)
+[![JWT](https://img.shields.io/badge/JWT-Authentication%20%26%20Refresh%20Token-yellow.svg)](https://jwt.io/)
+[![Role & Permission](https://img.shields.io/badge/Role%20%26%20Permission-Management-yellowgreen.svg)](https://learn.microsoft.com/en-us/aspnet/core/security/authorization/roles)
+[![CORS](https://img.shields.io/badge/CORS-Enabled-green.svg)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+
+### 🛠️ Patterns & Practices
+[![Dependency Injection](https://img.shields.io/badge/Dependency-Injection-6DB33F.svg)](https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection)
+[![Repository Pattern](https://img.shields.io/badge/Repository-Pattern-orange.svg)](https://learn.microsoft.com/en-us/dotnet/architecture/microservices)
+[![Unit of Work](https://img.shields.io/badge/Unit%20Of%20Work-Pattern-lightgrey.svg)](https://martinfowler.com/eaaCatalog/unitOfWork.html)
+[![AutoMapper](https://img.shields.io/badge/AutoMapper-12.0-lightblue.svg)](https://automapper.org/)
+[![Clean Architecture](https://img.shields.io/badge/Clean-Architecture-darkblue.svg)](https://learn.microsoft.com/en-us/dotnet/architecture/clean-architecture)
+
+### 📦 API & Integrations
+[![Stripe](https://img.shields.io/badge/Stripe-API-purple.svg)](https://stripe.com/)
+[![Postman](https://img.shields.io/badge/Postman-API-orange.svg)](https://www.postman.com/)
+[![Swagger](https://img.shields.io/badge/Swagger-UI-yellow.svg)](https://swagger.io/)
+[![API Versioning](https://img.shields.io/badge/API-Versioning-lightgrey.svg)](https://learn.microsoft.com/en-us/aspnet/core/web-api/advanced/versioning)
+
+### ⚙️ System Features
+[![Exception Handling](https://img.shields.io/badge/Exception%20%26%20Error-Handling-red.svg)](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/error-handling)
+[![Logging](https://img.shields.io/badge/Serilog-Logging-darkgreen.svg)](https://serilog.net/)
+[![Caching](https://img.shields.io/badge/Caching-InMemory-blue.svg)](https://learn.microsoft.com/en-us/dotnet/core/extensions/caching)
+[![Pagination](https://img.shields.io/badge/Pagination-Implemented-brightgreen.svg)]()
+[![Filtering](https://img.shields.io/badge/Filtering-Supported-teal.svg)]()
+[![Sorting](https://img.shields.io/badge/Sorting-Supported-teal.svg)]()
+[![Rate Limiting](https://img.shields.io/badge/Rate-Limiting-important.svg)]()
+
+### 📧 Background Jobs & Emails
+[![Hangfire](https://img.shields.io/badge/Hangfire-Background%20Jobs-brown.svg)](https://www.hangfire.io/)
+[![MailKit](https://img.shields.io/badge/MailKit-Email-blue.svg)](https://github.com/jstedfast/MailKit)
+[![SendGrid](https://img.shields.io/badge/SendGrid-Email-blue.svg)](https://sendgrid.com/)
+
+### ☁️ Cloud & DevOps
+[![Azure](https://img.shields.io/badge/Azure-Cloud-0078d4.svg)](https://azure.microsoft.com/)
+[![Azure AD B2C](https://img.shields.io/badge/Azure%20AD%20B2C-Identity-0078d4.svg)](https://azure.microsoft.com/en-us/services/active-directory-b2c/)
+[![Azure Functions](https://img.shields.io/badge/Azure%20Functions-Serverless-0078d4.svg)](https://azure.microsoft.com/en-us/services/functions/)
 [![Azure DevOps](https://img.shields.io/badge/Azure%20DevOps-CI/CD-0078d4.svg)](https://azure.microsoft.com/en-us/services/devops/)
 [![Azure Web App](https://img.shields.io/badge/Azure%20Web%20App-Hosting-0078d4.svg)](https://azure.microsoft.com/en-us/services/app-service/web/)
 [![Application Insights](https://img.shields.io/badge/Application%20Insights-Monitoring-0078d4.svg)](https://azure.microsoft.com/en-us/services/monitor/)
+
+### 🎨 Frontend
 [![Angular](https://img.shields.io/badge/Angular-18-DD0031.svg)](https://angular.io/)
+[![HTML5](https://img.shields.io/badge/HTML5-Frontend-E34F26.svg)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-Frontend-1572B6.svg)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-Framework-563D7C.svg)](https://getbootstrap.com/)
+[![jQuery](https://img.shields.io/badge/jQuery-Library-0769AD.svg)](https://jquery.com/)
+
 
 
 ## 🚀 Project Overview
@@ -175,38 +217,6 @@ EduPlatform/
 - **Scalability**: Architecture supports future growth and technology integration
 - **Flexibility**: Easy integration with new services and technologies
 
-## 🛠️ Technology Stack
-
-### Backend & Framework
-- **.NET Core 9**: Modern, cross-platform application framework
-- **Entity Framework Core 9**: Advanced ORM for database operations
-- **AutoMapper**: Efficient object-to-object mapping
-
-### Database & Storage
-- **Azure SQL Server**: Reliable relational database management
-- **Azure Blob Storage**: Scalable cloud storage for media files
-- **In-Memory Caching**: High-performance data caching
-
-### Authentication & Security
-- **Azure AD B2C**: Enterprise-grade identity management
-- **JWT Tokens**: Secure API authentication
-- **Environment Variables**: Secure configuration management
-
-### External Services
-- **Stripe**: Secure payment processing
-- **SendGrid**: Reliable email delivery service
-- **Application Insights**: Application performance monitoring
-
-### Development & Deployment
-- **Azure DevOps**: CI/CD pipeline and source control
-- **Azure Web App**: Managed hosting platform
-- **Azure Functions**: Serverless computing for background tasks
-- **Swagger**: Interactive API documentation
-
-### Logging & Monitoring
-- **Serilog**: Structured logging framework
-- **Health Checks**: Application health monitoring
-- **Application Insights**: Performance and usage analytics
 
 ## ⚡ Azure Functions Integration
 
