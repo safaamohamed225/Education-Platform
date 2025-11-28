@@ -20,7 +20,7 @@ namespace EduSpark.API
             if (app.Environment.IsDevelopment())
             {
                 //app.UseSwagger();
-                //app.UseSwaggerUI();
+                //app.UseSwaggerUI(); 
             }
 
             app.UseHttpsRedirection();
