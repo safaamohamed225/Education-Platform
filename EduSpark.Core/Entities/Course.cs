@@ -10,7 +10,7 @@ namespace EduSpark.Core.Entities;
 public partial class Course
 {
     [Key]
-    public int CourseId { get; set; }
+    public int CourseId { get; set; } 
 
     [StringLength(100)]
     public string Title { get; set; } = null!;

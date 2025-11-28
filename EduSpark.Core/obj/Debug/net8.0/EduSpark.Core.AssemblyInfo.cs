@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EduSpark.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a782f29e0d1b90b2c543b4a542451b521aa1b8ef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fac3f073eeb2a920d05e1d7c992ab67f64c9aead")]
 [assembly: System.Reflection.AssemblyProductAttribute("EduSpark.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EduSpark.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
