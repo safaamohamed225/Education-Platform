@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\EducationApp\\EduSpark.Service\\EduSpark.Service.csproj": {}
+    "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Service\\EduSpark.Service.csproj": {}
   },
   "projects": {
-    "D:\\EducationApp\\EduSpark.Core\\EduSpark.Core.csproj": {
+    "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Core\\EduSpark.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\EducationApp\\EduSpark.Core\\EduSpark.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Core\\EduSpark.Core.csproj",
         "projectName": "EduSpark.Core",
-        "projectPath": "D:\\EducationApp\\EduSpark.Core\\EduSpark.Core.csproj",
-        "packagesPath": "C:\\Users\\SAFA\\.nuget\\packages\\",
-        "outputPath": "D:\\EducationApp\\EduSpark.Core\\obj\\",
+        "projectPath": "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Core\\EduSpark.Core.csproj",
+        "packagesPath": "C:\\Users\\Sofi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\SAFA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sofi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -90,24 +90,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\EducationApp\\EduSpark.Data\\EduSpark.Data.csproj": {
+    "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Data\\EduSpark.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\EducationApp\\EduSpark.Data\\EduSpark.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Data\\EduSpark.Data.csproj",
         "projectName": "EduSpark.Data",
-        "projectPath": "D:\\EducationApp\\EduSpark.Data\\EduSpark.Data.csproj",
-        "packagesPath": "C:\\Users\\SAFA\\.nuget\\packages\\",
-        "outputPath": "D:\\EducationApp\\EduSpark.Data\\obj\\",
+        "projectPath": "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Data\\EduSpark.Data.csproj",
+        "packagesPath": "C:\\Users\\Sofi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\SAFA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sofi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -123,8 +123,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\EducationApp\\EduSpark.Core\\EduSpark.Core.csproj": {
-                "projectPath": "D:\\EducationApp\\EduSpark.Core\\EduSpark.Core.csproj"
+              "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Core\\EduSpark.Core.csproj": {
+                "projectPath": "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Core\\EduSpark.Core.csproj"
               }
             }
           }
@@ -139,7 +139,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -184,24 +184,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\EducationApp\\EduSpark.Service\\EduSpark.Service.csproj": {
+    "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Service\\EduSpark.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\EducationApp\\EduSpark.Service\\EduSpark.Service.csproj",
+        "projectUniqueName": "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Service\\EduSpark.Service.csproj",
         "projectName": "EduSpark.Service",
-        "projectPath": "D:\\EducationApp\\EduSpark.Service\\EduSpark.Service.csproj",
-        "packagesPath": "C:\\Users\\SAFA\\.nuget\\packages\\",
-        "outputPath": "D:\\EducationApp\\EduSpark.Service\\obj\\",
+        "projectPath": "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Service\\EduSpark.Service.csproj",
+        "packagesPath": "C:\\Users\\Sofi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\SAFA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sofi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -217,11 +217,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\EducationApp\\EduSpark.Core\\EduSpark.Core.csproj": {
-                "projectPath": "D:\\EducationApp\\EduSpark.Core\\EduSpark.Core.csproj"
+              "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Core\\EduSpark.Core.csproj": {
+                "projectPath": "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Core\\EduSpark.Core.csproj"
               },
-              "D:\\EducationApp\\EduSpark.Data\\EduSpark.Data.csproj": {
-                "projectPath": "D:\\EducationApp\\EduSpark.Data\\EduSpark.Data.csproj"
+              "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Data\\EduSpark.Data.csproj": {
+                "projectPath": "C:\\Users\\Sofi\\source\\repos\\Education-Platform\\EduSpark.Data\\EduSpark.Data.csproj"
               }
             }
           }
@@ -236,7 +236,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -281,7 +281,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

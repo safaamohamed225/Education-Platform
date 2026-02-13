@@ -10,6 +10,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.20" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.20">
     </PackageReference>
+	  
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.20" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.20">
       <PrivateAssets>all</PrivateAssets>
@@ -19,9 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\EduSpark.Core\EduSpark.Core.csproj" />
-    <ProjectReference Include="..\..\EduSpark.Data\EduSpark.Data.csproj" />
-    <ProjectReference Include="..\..\EduSpark.Service\EduSpark.Service.csproj" />
+    <ProjectReference Include="..\EduSpark.Core\EduSpark.Core.csproj" />
+    <ProjectReference Include="..\EduSpark.Data\EduSpark.Data.csproj" />
+    <ProjectReference Include="..\EduSpark.Service\EduSpark.Service.csproj" />
   </ItemGroup>
 
 </Project>
