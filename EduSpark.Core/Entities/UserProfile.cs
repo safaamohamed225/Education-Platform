@@ -38,4 +38,7 @@ public partial class UserProfile
 
     [InverseProperty("User")]
     public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
+
+    [InverseProperty("User")]
+    public virtual ICollection<VideoRequest> VideoRequests { get; set; } = new List<VideoRequest>();
 }

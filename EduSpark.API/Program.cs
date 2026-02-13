@@ -1,4 +1,7 @@
 
+using EduSpark.data.Entities;
+using Microsoft.EntityFrameworkCore;
+
 namespace EduSpark.API
 {
     public class Program
@@ -6,6 +9,15 @@ namespace EduSpark.API
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            var configuration = builder.Configuration;
+
+            builder.Services.AddDbContextPool<EduSparkDbContext>(options =>
+            {
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
+                ServiceProviderOptions => ServiceProviderOptions.EnableRetryOnFailure()
+                );
+                });
 
             // Add services to the container.
 
