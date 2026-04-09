@@ -9,15 +9,15 @@ import { FormsModule } from '@angular/forms';
 })
 export class DataBinding {
   // Interpolation examples
-  firstName: string = 'Learn';
-  lastName: string = 'Smart Coding';
+  firstName: string = 'Hello';
+  lastName: string = 'There!';
   itemCount: number = 10;
   price: number = 50;
   quantity: number = 3;
 
   // Property binding examples
   isDisabled: boolean = true;
-  imageUrl: string = 'https://smartlearnbykarthik.azurewebsites.net/assets/skills/4.png';
+  imageUrl: string = '';
   isActive: boolean = true;
 
   
@@ -27,7 +27,7 @@ export class DataBinding {
   message: string = '';
 
   // Two-way binding examples
-  username: string = 'Learn Smart Coding';
+  username: string = 'Learning Angular';
   isChecked: boolean = true;
   selectedOption: string = 'option1';
 
