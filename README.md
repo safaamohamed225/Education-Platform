@@ -431,10 +431,6 @@ We welcome contributions! Please follow these steps:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🔗 Related Repositories
-
-- **Azure Functions**: [Education-Platform](https://github.com/safaamohamed225/Education-Platform)
-
 ## 📞 Support
 
 For support and questions:
