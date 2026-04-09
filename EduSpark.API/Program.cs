@@ -1,5 +1,6 @@
-
-using EduSpark.data.Entities;
+using EduSpark.Data.Entities;
+using EduSpark.Data;
+using EduSpark.Service;
 using Microsoft.EntityFrameworkCore;
 
 namespace EduSpark.API
@@ -12,33 +13,37 @@ namespace EduSpark.API
 
             var configuration = builder.Configuration;
 
+            // DbContext
+            //builder.Services.AddDbContext<EduSparkDbContext>(options =>
+            //    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
+            //);
             builder.Services.AddDbContextPool<EduSparkDbContext>(options =>
             {
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
-                ServiceProviderOptions => ServiceProviderOptions.EnableRetryOnFailure()
+                sqlOptions => sqlOptions.EnableRetryOnFailure()
                 );
-                });
+            });
 
-            // Add services to the container.
+            // Services & Repositories
+            builder.Services.AddScoped<ICourseCategoryRepository, CourseCategoryRepository>();
+            builder.Services.AddScoped<ICourseCategoryService, CourseCategoryService>();
 
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+            // Swagger
             builder.Services.AddEndpointsApiExplorer();
-            //builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
-                //app.UseSwagger();
-                //app.UseSwaggerUI(); 
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
 
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
 
             app.MapControllers();
 
