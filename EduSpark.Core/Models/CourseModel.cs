@@ -47,7 +47,6 @@ namespace EduSpark.Core.Models
         public CourseCategoryModel Category { get; set; } = null!;
         public UserRatingModel UserRating { get; set; }
     }
-
     public class UserRatingModel
     {
         public int  CourseId { get; set; }

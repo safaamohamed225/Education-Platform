@@ -22,13 +22,19 @@ namespace EduSpark.API
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
                 sqlOptions => sqlOptions.EnableRetryOnFailure()
                 );
+
+                //options.EnableSensitiveDataLogging();
             });
+
+            builder.Services.AddControllers();
 
             // Services & Repositories
             builder.Services.AddScoped<ICourseCategoryRepository, CourseCategoryRepository>();
             builder.Services.AddScoped<ICourseCategoryService, CourseCategoryService>();
 
-            builder.Services.AddControllers();
+            builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+            builder.Services.AddScoped<ICourseService, CourseService>();
+
 
             // Swagger
             builder.Services.AddEndpointsApiExplorer();
