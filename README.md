@@ -229,8 +229,6 @@ EduPlatform leverages Azure Functions for serverless and background processing t
 | `VideoRequestTrigger` | SQL Trigger | Listens for database changes and sends confirmation emails |
 | `SendVideoRequestAckEmailToUser` | HTTP | Sends acknowledgment emails for video requests |
 
-**🔗 Azure Functions Repository**: [Education-Platform](https://github.com/safaamohamed225/Education-Platform)
-
 ## 📚 API Documentation
 
 ### 📦 Categories
@@ -432,16 +430,6 @@ We welcome contributions! Please follow these steps:
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🔗 Related Repositories
-
-- **Azure Functions**: [Education-Platform](https://github.com/safaamohamed225/Education-Platform)
-
-## 📞 Support
-
-For support and questions:
-- Create an issue in this repository
-- Contact: [Through Mail](safaa.mohamed.ibrahem@gmail.com)
 
 ## 🙏 Acknowledgments
 
