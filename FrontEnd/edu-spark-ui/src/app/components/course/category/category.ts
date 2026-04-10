@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { CourseCategory } from '../../../models/category';
 
 @Component({
   selector: 'app-category',
@@ -12,7 +13,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
   styleUrl: './category.css',
 })
 export class Category implements OnInit {
- // @Input() categories: CourseCategory[] = [];
+  @Input() categories: CourseCategory[] = [];
   @Input() viewType: 'tabs' | 'list' = 'list';
 
   //selectedCategory: CourseCategory | null = null;
