@@ -1,0 +1,26 @@
+<!-- src/app/category/category.component.html -->
+<div>
+    <div class="text-content">
+      <h2>All the Skills You Need in One Place</h2>
+      <h5><small>From critical skills to technical topics, supports your professional development.</small></h5>
+    </div>
+  
+    <!-- Full-Width List View -->
+
+  
+    <!-- Horizontal Tab View -->
+  <div *ngIf="viewType === 'tabs'" class="carousel-container">
+    <div  class="card category-card">
+      <div class="card-body">
+        <h5 class="card-title">
+          <i class="bi bi-bookmark-fill me-2"></i>All Courses
+        </h5>
+        <p class="card-text">Take a look at various courses available to enroll, learn and succeed career.</p>
+        <a [routerLink]="['/course/browse']" class="btn btn-primary">Explore</a>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+  
