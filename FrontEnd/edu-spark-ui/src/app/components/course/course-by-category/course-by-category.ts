@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BrowseCourse } from "../browse-course/browse-course";
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -6,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-course-by-category',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [BrowseCourse, FormsModule, CommonModule],
   templateUrl: './course-by-category.html',
   styleUrl: './course-by-category.css'
 })
