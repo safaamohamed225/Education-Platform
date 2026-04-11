@@ -7,6 +7,7 @@ import { ContactUs} from './components/core/contact-us/contact-us';
 import { About } from './components/core/about/about';
 import { trigger, transition, style, query, group, animate } from '@angular/animations';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSpinner } from 'ngx-spinner';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavBar,
     Home,
     PlansAndPricing,
-    ContactUs, 
+    ContactUs,
+    About,
+    NgxSpinner,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
