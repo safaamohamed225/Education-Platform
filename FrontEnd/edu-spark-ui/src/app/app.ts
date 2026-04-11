@@ -16,8 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavBar,
     Home,
     PlansAndPricing,
-    ContactUs,
-    
+    ContactUs, 
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
