@@ -6,6 +6,7 @@ import { Category } from '../course/category/category';
 
 @Component({
   selector: 'app-home',
+  standalone: true,
   imports: [CarouselModule, PlansAndPricing, CommonModule, Category],
   templateUrl: './home.html',
   styleUrl: './home.css',

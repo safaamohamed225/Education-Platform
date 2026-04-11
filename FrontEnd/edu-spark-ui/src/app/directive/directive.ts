@@ -1,8 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-directive',
-  imports: [],
+  imports: [CommonModule],
+  standalone: true,         
   templateUrl: './directive.html',
   styleUrl: './directive.css',
 })

@@ -2,18 +2,38 @@
 
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <carousel [isAnimated]="true">
+            <slide>
+                <img src="../../../assets/skills/img1.jpg" alt="First slide" class="d-block w-100 slide-img">
+            </slide>
+            <slide>
+                <img src="../../../assets/skills/img2.jpg" alt="First slide" class="d-block w-100 slide-img">
+            </slide>
+            <slide>
+                <img src="../../../assets/skills/img3.jpg" alt="First slide" class="d-block w-100 slide-img">
+            </slide>
+            <slide>
+                <img src="../../../assets/skills/img4.jpg" alt="First slide" class="d-block w-100 slide-img">
+            </slide>
+            <slide>
+                <img src="../../../assets/skills/img5.jpg" alt="First slide" class="d-block w-100 slide-img">
+            </slide>
+        </carousel>
 
-  <slide>
-    <img src="../../../assets/skills/img1.jpg" alt="first slide" style="display: block; width: 100%;">
-  </slide>
-  <slide>
-    <img src="../../../assets/skills/img2.jpg" alt="second slide" style="display: block; width: 100%;">
-  </slide>
-  <slide>
-    <img src="../../../assets/skills/img3.jpg" alt="third slide" style="display: block; width: 100%;">
-  </slide>
-</carousel>
     </div>
-    <app-category></app-category>
+    <div class="trusted-section">
+        <h3>Trusted by over 4700+ individuals from YouTube and millions of learners around the world</h3>
+    </div>
+    <app-category [viewType]="'tabs'"></app-category>
+
+    <!-- <div class="text-content">
+        <h2>All the skills you need in one place</h2>
+        <h5><small>From critical skills to technical topics, SmartLearn by Karthik supports your professional
+                development.</small></h5>
+    </div> 
+
+    <div class="cta-container">
+        <button class="cta-btn">Explore Courses</button>
+    </div> -->
+
     <app-plans-and-pricing></app-plans-and-pricing>
 </div>

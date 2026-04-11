@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './course-by-category.html',
   styleUrl: './course-by-category.css'
 })
-export class CourseByCategoryComponent {
+export class CourseByCategory {
   categoryId: number = 0;
 
   constructor(private route: ActivatedRoute, private router: Router) {}
