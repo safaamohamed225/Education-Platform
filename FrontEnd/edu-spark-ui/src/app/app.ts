@@ -19,7 +19,7 @@ import { NgxSpinner } from 'ngx-spinner';
     PlansAndPricing,
     ContactUs,
     About,
-    NgxSpinner,
+    //NgxSpinner,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
