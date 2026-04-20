@@ -17,6 +17,7 @@ namespace EduSpark.API.Middlewares
                 var responseBody = await reader.ReadToEndAsync();
                 memoryStream.Position = 0;
                 await memoryStream.CopyToAsync(originalBodyStream);
+                // Write response body to App Insights
                 var requestTelemetry = context.Features.Get<RequestTelemetry>();
                 requestTelemetry?.Properties.Add("ResponseBody", responseBody);
             }
