@@ -19,21 +19,21 @@ namespace EduSpark.API.Controllers
         [HttpGet]
         public async Task<ActionResult<List<CourseModel>>> GetAllCouses()
         {
-            var courses = await _courseService.GetAllCourses();
+            var courses = await _courseService.GetAllCoursesAsync();
             return Ok(courses);
         }
 
         [HttpGet("category/{categoryId}")]
         public async Task<ActionResult<List<CourseModel>>> GetCoursesByCategoryId([FromRoute] int categoryId)
         {
-            var courses = await _courseService.GetAllCourses(categoryId);
+            var courses = await _courseService.GetAllCoursesAsync(categoryId);
             return Ok(courses);
         }
 
         [HttpGet("details/{courseId}")]
         public async Task<ActionResult<CourseDetailModel>> GetCourseDetails([FromRoute] int courseId)
         {
-            var course = await _courseService.GetCourseDetails(courseId);
+            var course = await _courseService.GetCourseDetailAsync(courseId);
             if (course == null)
             {
                 return NotFound();

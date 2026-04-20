@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace EduSpark.Data
 {
-    public class CourseCategoryRepository(EduSparkDbContext context) : ICourseCategoryRepository
+    public class CourseCategoryRepository(EduSparkDB context) : ICourseCategoryRepository
     {
-        private readonly EduSparkDbContext _context = context;
+        private readonly EduSparkDB _context = context;
         public async Task<CourseCategory?> GetByIdAsync(int id)
         {
             var data =  await _context.CourseCategories.FindAsync(id);

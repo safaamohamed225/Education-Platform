@@ -26,6 +26,8 @@ public partial class UserProfile
 
     [StringLength(128)]
     public string AdObjId { get; set; } = null!;
+    [StringLength(500)]
+    public string? ProfilePictureUrl { get; set; }
 
     [InverseProperty("User")]
     public virtual ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();

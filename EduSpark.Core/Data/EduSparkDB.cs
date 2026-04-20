@@ -1,25 +1,21 @@
-﻿using EduSpark.Core.Entities;
-using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using EduSpark.Core.Entities;
+using Microsoft.EntityFrameworkCore;
 
-namespace EduSpark.Data.Entities;
+namespace EduSpark.Core.Data;
 
-// to use EF Core, we inherit from DbContext class
 public partial class EduSparkDB : DbContext
 {
     public EduSparkDB()
     {
     }
 
-    //this option is used to pass sql connection string details from the program.cs DI
     public EduSparkDB(DbContextOptions<EduSparkDB> options)
         : base(options)
     {
     }
 
-    //Every table in database needs to be configured as DbSet<T> where T denotes the table.
-    //we did all 10 tables from databse so that we can use it in our application
     public virtual DbSet<Course> Courses { get; set; }
 
     public virtual DbSet<CourseCategory> CourseCategories { get; set; }
@@ -44,7 +40,10 @@ public partial class EduSparkDB : DbContext
 
     public virtual DbSet<VideoRequest> VideoRequests { get; set; }
 
-    //All the table definitions are configured here based on our DB
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=EduSparkDB;Integrated Security=True;Connect Timeout=30;Encrypt=True;TrustServerCertificate=True");
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Course>(entity =>
@@ -201,7 +200,6 @@ public partial class EduSparkDB : DbContext
             entity.Property(e => e.Email).HasMaxLength(100);
             entity.Property(e => e.FirstName).HasMaxLength(50);
             entity.Property(e => e.LastName).HasMaxLength(50);
-            entity.Property(e => e.ProfilePictureUrl).HasMaxLength(500);
         });
 
         modelBuilder.Entity<UserRole>(entity =>
@@ -236,7 +234,6 @@ public partial class EduSparkDB : DbContext
             entity.Property(e => e.Response).HasMaxLength(4000);
             entity.Property(e => e.ShortTitle).HasMaxLength(200);
             entity.Property(e => e.SubTopic).HasMaxLength(50);
-            entity.Property(e => e.RequestStatus).HasMaxLength(50);
             entity.Property(e => e.Topic).HasMaxLength(50);
             entity.Property(e => e.VideoUrls).HasMaxLength(2000);
 

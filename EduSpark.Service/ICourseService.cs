@@ -1,4 +1,10 @@
-﻿using EduSpark.Core.Models;
+﻿using AutoMapper;
+using EduSpark.Core.Entities;
+using EduSpark.Core.Models;
+using EduSpark.Data;
+using EduSpark.Core.Entities;
+using EduSpark.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +13,14 @@ using System.Threading.Tasks;
 
 namespace EduSpark.Service
 {
+
     public interface ICourseService
     {
-        Task<List<CourseModel>> GetAllCourses(int? categoryId = null);
-        Task<CourseDetailModel> GetCourseDetails(int courseId);
+        Task<List<CourseModel>> GetAllCoursesAsync(int? categoryId = null);
+        Task<CourseDetailModel> GetCourseDetailAsync(int courseId);
+        Task AddCourseAsync(CourseDetailModel courseModel);
+        Task UpdateCourseAsync(CourseDetailModel courseModel);
+        Task DeleteCourseAsync(int courseId);
+        Task<bool> UpdateCourseThumbnail(string courseThumbnailUrl, int courseId);
     }
 }

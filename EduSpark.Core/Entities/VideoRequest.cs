@@ -25,6 +25,10 @@ public partial class VideoRequest
 
     [StringLength(4000)]
     public string RequestDescription { get; set; } = null!;
+    [StringLength(500)]
+
+    public string RequestStatus { get; set; } = null!;
+
 
     [StringLength(4000)]
     public string? Response { get; set; }

@@ -17,7 +17,7 @@ namespace EduSpark.API
             //builder.Services.AddDbContext<EduSparkDbContext>(options =>
             //    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
             //);
-            builder.Services.AddDbContextPool<EduSparkDbContext>(options =>
+            builder.Services.AddDbContextPool<EduSparkDB>(options =>
             {
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
                 sqlOptions => sqlOptions.EnableRetryOnFailure()

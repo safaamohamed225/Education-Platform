@@ -1,4 +1,5 @@
-﻿using EduSpark.Core.Models;
+﻿using EduSpark.Core.Entities;
+using EduSpark.Core.Models;
 using EduSpark.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,11 +7,22 @@ namespace EduSpark.Data
 {
     public class CourseRepository : ICourseRepository
     {
-        private readonly EduSparkDbContext _context;
-        public CourseRepository(EduSparkDbContext context)
+        private readonly EduSparkDB _context;
+        public CourseRepository(EduSparkDB context)
         {
             _context = context;
         }
+
+        public Task AddCourseAsync(Course course)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteCourseAsync(int courseId)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<List<CourseModel>> GetAllCoursesAsync(int? categoryId = null)
         {
             var query = _context.Courses
@@ -49,6 +61,21 @@ namespace EduSpark.Data
                     }
                 }).ToListAsync();
             return courses;
+        }
+
+        public Task<List<Instructor>> GetAllInstructorsAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Course> GetCourseByIdAsync(int courseId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<CourseDetailModel> GetCourseDetailAsync(int courseId)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<CourseDetailModel> GetCourseDetailsAsync(int courseId)
@@ -107,6 +134,21 @@ namespace EduSpark.Data
                     }
                 }).FirstOrDefaultAsync();
             return courseDetails!;
+        }
+
+        public void RemoveSessionDetail(SessionDetail sessionDetail)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateCourseAsync(Course course)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateCourseThumbnail(string courseThumbnailUrl, int courseId)
+        {
+            throw new NotImplementedException();
         }
     }     
 }
