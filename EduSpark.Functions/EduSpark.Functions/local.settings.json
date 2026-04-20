@@ -5,7 +5,7 @@
     "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
     "DefaultConnection": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=EduSparkDB;Integrated Security=True;Connect Timeout=30;Encrypt=True;TrustServerCertificate=True",
     "BASIC_AUTH_USERNAME": "admin",
-    "BASIC_AUTH_PASSWORD": "karthik",
+    "BASIC_AUTH_PASSWORD": "",
     "UpdateProfileURL": "",
     "From": "",
     "SENDGRID_API_KEY": "",
