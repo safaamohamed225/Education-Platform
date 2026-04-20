@@ -1,0 +1,19 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+    "DefaultConnection": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=EduSparkDB;Integrated Security=True;Connect Timeout=30;Encrypt=True;TrustServerCertificate=True",
+    "BASIC_AUTH_USERNAME": "admin",
+    "BASIC_AUTH_PASSWORD": "karthik",
+    "UpdateProfileURL": "",
+    "From": "",
+    "SENDGRID_API_KEY": "",
+    "Sql_Trigger_MaxBatchSize": 300,
+    "Sql_Trigger_PollingIntervalMs": 1000,
+    "Sql_Trigger_MaxChangesPerWorker": 100
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=EduSparkDB;Integrated Security=True;Connect Timeout=30;Encrypt=True;TrustServerCertificate=True"
+  }
+}
