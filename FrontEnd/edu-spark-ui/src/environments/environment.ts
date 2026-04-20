@@ -18,7 +18,7 @@ export const environment: EnvironmentConfiguration = {
   },
   adb2cConfig: {
     chatHubUrl: 'https://localhost:7005/chathub', 
-    clientId: '5212f2c7-60a9-46ad-bcbb-3f5dc9af3dab',
+    clientId: '',
     readScopeUrl: '',
     writeScopeUrl: '',
     scopeUrls:[

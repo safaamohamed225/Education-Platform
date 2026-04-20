@@ -1,0 +1,6 @@
+@EduSpark.Functions_HostAddress = http://localhost:5032
+
+GET {{EduSpark.Functions_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
