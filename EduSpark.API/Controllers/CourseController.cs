@@ -1,4 +1,5 @@
-﻿using EduSpark.Core.Entities;
+﻿using EduSpark.API.Common.EduSpark.API.Common;
+using EduSpark.Core.Entities;
 using EduSpark.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -63,7 +64,7 @@ namespace EduSpark.API.Controllers
 
         [HttpPost]
         [Authorize]
-        //[AdminRole]
+        [AdminRole]
         [RequiredScope(RequiredScopesConfigurationKey = "AzureAdB2C:Scopes:Write")]
         public async Task<IActionResult> AddCourse([FromBody] CourseDetailModel courseModel)
         {
@@ -78,7 +79,7 @@ namespace EduSpark.API.Controllers
 
         [HttpPut("{id}")]
         [Authorize]
-       // [AdminRole]
+        [AdminRole]
         [RequiredScope(RequiredScopesConfigurationKey = "AzureAdB2C:Scopes:Write")]
         public async Task<IActionResult> UpdateCourse(int id, [FromBody] CourseDetailModel courseModel)
         {
@@ -98,7 +99,7 @@ namespace EduSpark.API.Controllers
 
         [HttpDelete("{id}")]
         [Authorize]
-        //[AdminRole]
+        [AdminRole]
         [RequiredScope(RequiredScopesConfigurationKey = "AzureAdB2C:Scopes:Write")]
         public async Task<IActionResult> DeleteCourse(int id)
         {
@@ -116,7 +117,7 @@ namespace EduSpark.API.Controllers
 
         [HttpPost("upload-thumbnail")]
         [Authorize]
-        //[AdminRole]
+        [AdminRole]
         public async Task<IActionResult> UploadThumbnail(IFormFile file)
         {
             var courseId = Convert.ToInt32(Request.Form["courseId"]);
@@ -142,9 +143,6 @@ namespace EduSpark.API.Controllers
                 // Update the profile picture URL in the database
                 await courseService.UpdateCourseThumbnail(thumbnailUrl, courseId);
             }
-
-
-
             return Ok(new { message = "Thumbnail uploaded successfully", thumbnailUrl });
         }
     }
