@@ -23,7 +23,6 @@ namespace EduSpark.Core.Models
         public string? Bio { get; set; }
         public required List<UserRoleModel> UserRoleModel { get; set; }
     }
-
     public class UserRoleModel
     {
         public int UserRoleId { get; set; }
@@ -39,7 +38,4 @@ namespace EduSpark.Core.Models
 
         public string RoleName { get; set; } = null!;
     }
-
-
-
 }
