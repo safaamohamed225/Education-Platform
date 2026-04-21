@@ -37,6 +37,7 @@ public partial class Course
 
     [Column(TypeName = "datetime")]
     public DateTime? EndDate { get; set; }
+    public string? Thumbnail { get; set; }
 
     [ForeignKey("CategoryId")]
     [InverseProperty("Courses")]

@@ -1,4 +1,5 @@
-﻿using EduSpark.Core.Models;
+﻿using EduSpark.Core.Entities;
+using EduSpark.Core.Models;
 using EduSpark.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
