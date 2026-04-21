@@ -1,8 +1,9 @@
+using EduSpark.API.Common;
 using EduSpark.Data;
+using EduSpark.Data.Entities;
 using EduSpark.Service;
 using Microsoft.EntityFrameworkCore;
-using EduSpark.API.Common;
-using EduSpark.Data.Entities;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 namespace EduSpark.API
 {
@@ -26,6 +27,16 @@ namespace EduSpark.API
 
                 //options.EnableSensitiveDataLogging();
             });
+
+            builder.Services.AddHealthChecks()
+                    .AddSqlServer(
+                        connectionString: configuration.GetConnectionString("DefaultConnection"),
+                        healthQuery: "SELECT 1;", // Query to check database health.
+                        name: "sqlserver",
+                        failureStatus: HealthStatus.Degraded, // Degraded health status if the check fails.
+                        tags: new[] { "db", "sql" })
+                    .AddCheck("Memory", new PrivateMemoryHealthCheck(1024 * 1024 * 1024)); // A custom health check for memory.
+
 
             builder.Services.AddControllers();
             builder.Services.AddHttpContextAccessor();

@@ -10,7 +10,6 @@ namespace EduSpark.API.Common
         {
             _maxMemoryThreshold = maxMemoryThreshold;
         }
-
         public Task<HealthCheckResult> CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken = default)
         {
             long memoryUsage = GC.GetTotalMemory(false);
