@@ -112,6 +112,7 @@ namespace EduSpark.API
 
 
             app.Run();
+
         }
     }
 }
