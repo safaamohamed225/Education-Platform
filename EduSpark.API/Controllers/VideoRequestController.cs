@@ -1,4 +1,5 @@
-﻿using EduSpark.Core.Models;
+﻿using EduSpark.API.Common;
+using EduSpark.Core.Models;
 using EduSpark.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -9,13 +10,16 @@ namespace EduSpark.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    //[Authorize]
+    [Authorize]
     public class VideoRequestController : ControllerBase
     {
         private readonly IVideoRequestService _videoRequestService;
-        public VideoRequestController(IVideoRequestService videoRequestService)
+        private readonly IUserClaims _userClaims;
+        public VideoRequestController(IVideoRequestService videoRequestService, IUserClaims userClaims)
         {
             _videoRequestService = videoRequestService;
+            _userClaims = userClaims;
+
         }
 
         [HttpGet]
