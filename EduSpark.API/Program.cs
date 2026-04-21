@@ -2,6 +2,7 @@ using EduSpark.API.Common;
 using EduSpark.Data;
 using EduSpark.Data.Entities;
 using EduSpark.Service;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
@@ -80,6 +81,35 @@ namespace EduSpark.API
             app.UseAuthorization();
 
             app.MapControllers();
+
+            app.MapHealthChecks("/health", new HealthCheckOptions
+            {
+                ResponseWriter = HealthCheckResponseWriter.WriteJsonResponse
+            });
+
+            // Liveness probe
+            app.MapHealthChecks("/health/live", new HealthCheckOptions
+            {
+                Predicate = _ => false, // No specific checks, just indicates the app is live
+                ResponseWriter = async (context, report) =>
+                {
+                    context.Response.ContentType = "application/json";
+                    var json = new
+                    {
+                        status = report.Status.ToString(),
+                        description = "Liveness check - the app is up"
+                    };
+                    await context.Response.WriteAsJsonAsync(json);
+                }
+            });
+
+            // Readiness probe
+            app.MapHealthChecks("/health/ready", new HealthCheckOptions
+            {
+                Predicate = check => check.Tags.Contains("ready"), // Only run checks tagged as "ready"
+                ResponseWriter = HealthCheckResponseWriter.WriteJsonResponse
+            });
+
 
             app.Run();
         }
