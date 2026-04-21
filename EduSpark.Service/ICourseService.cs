@@ -21,6 +21,7 @@ namespace EduSpark.Service
         Task AddCourseAsync(CourseDetailModel courseModel);
         Task UpdateCourseAsync(CourseDetailModel courseModel);
         Task DeleteCourseAsync(int courseId);
+        Task<List<InstructorModel>> GetAllInstructorsAsync();
         Task<bool> UpdateCourseThumbnail(string courseThumbnailUrl, int courseId);
     }
 }

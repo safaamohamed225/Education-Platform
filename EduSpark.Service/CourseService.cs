@@ -1,4 +1,5 @@
-﻿using EduSpark.Core.Entities;
+﻿using AutoMapper;
+using EduSpark.Core.Entities;
 using EduSpark.Core.Models;
 using EduSpark.Data;
 using System;
@@ -11,22 +12,24 @@ namespace EduSpark.Service
 {
     public class CourseService : ICourseService
     {
-        private readonly ICourseRepository _courseRepository;
-        public CourseService(ICourseRepository courseRepository)
-        {
-            _courseRepository = courseRepository;
-        }
-        public async Task<List<CourseModel>> GetAllCoursesAsync(int? categoryId = null)
-        {
-            var result = await _courseRepository.GetAllCoursesAsync(categoryId);
+        private readonly ICourseRepository courseRepository;
+        private readonly IMapper mapper;
 
-            return result;
+        public CourseService(ICourseRepository courseRepository, IMapper mapper)
+        {
+            this.courseRepository = courseRepository;
+            this.mapper = mapper;
         }
+
+        public Task<List<CourseModel>> GetAllCoursesAsync(int? categoryId = null)
+        {
+            return courseRepository.GetAllCoursesAsync(categoryId);
+        }
+
 
         public Task<CourseDetailModel> GetCourseDetailAsync(int courseId)
         {
-            var result = _courseRepository.GetCourseDetailAsync(courseId);
-            return result;
+            return courseRepository.GetCourseDetailAsync(courseId);
         }
 
         public async Task AddCourseAsync(CourseDetailModel model)
@@ -53,12 +56,12 @@ namespace EduSpark.Service
                 }).ToList()
             };
 
-            await _courseRepository.AddCourseAsync(courseEntity);
+            await courseRepository.AddCourseAsync(courseEntity);
         }
 
         public async Task UpdateCourseAsync(CourseDetailModel courseModel)
         {
-            var course = await _courseRepository.GetCourseByIdAsync(courseModel.CourseId);
+            var course = await courseRepository.GetCourseByIdAsync(courseModel.CourseId);
             if (course == null)
             {
                 throw new Exception("Course not found");
@@ -86,7 +89,7 @@ namespace EduSpark.Service
             foreach (var session in sessionsToRemove)
             {
                 course.SessionDetails.Remove(session);
-                _courseRepository.RemoveSessionDetail(session); // This removes the session from the database
+                courseRepository.RemoveSessionDetail(session); // This removes the session from the database
             }
 
             // Update or add session details
@@ -117,18 +120,23 @@ namespace EduSpark.Service
             }
 
             // Call repository to update the course along with its session details
-            await _courseRepository.UpdateCourseAsync(course);
+            await courseRepository.UpdateCourseAsync(course);
         }
 
         public async Task DeleteCourseAsync(int courseId)
         {
-            await _courseRepository.DeleteCourseAsync(courseId);
+            await courseRepository.DeleteCourseAsync(courseId);
+        }
+
+        public async Task<List<InstructorModel>> GetAllInstructorsAsync()
+        {
+            var instructors = await courseRepository.GetAllInstructorsAsync();
+            return mapper.Map<List<InstructorModel>>(instructors);
         }
 
         public Task<bool> UpdateCourseThumbnail(string courseThumbnailUrl, int courseId)
         {
-            return _courseRepository.UpdateCourseThumbnail(courseThumbnailUrl, courseId);
+            return courseRepository.UpdateCourseThumbnail(courseThumbnailUrl, courseId);
         }
-
     }
 }
