@@ -41,7 +41,8 @@ namespace EduSpark.API
             builder.Services.AddScoped<ICourseRepository, CourseRepository>();
             builder.Services.AddScoped<ICourseService, CourseService>();
 
-
+            builder.Services.AddScoped<IVideoRequestRepository, VideoRequestRepository>();
+            builder.Services.AddScoped<IVideoRequestService, VideoRequestService>();
             // Swagger
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
