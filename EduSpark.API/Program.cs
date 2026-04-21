@@ -2,6 +2,7 @@ using EduSpark.Data.Entities;
 using EduSpark.Data;
 using EduSpark.Service;
 using Microsoft.EntityFrameworkCore;
+using EduSpark.API.Common;
 
 namespace EduSpark.API
 {
@@ -28,6 +29,11 @@ namespace EduSpark.API
 
             builder.Services.AddControllers();
 
+            //builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
+            builder.Services.AddAutoMapper(cfg =>
+            {
+                cfg.AddProfile<MappingProfile>();
+            });
             // Services & Repositories
             builder.Services.AddScoped<ICourseCategoryRepository, CourseCategoryRepository>();
             builder.Services.AddScoped<ICourseCategoryService, CourseCategoryService>();
