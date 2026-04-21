@@ -28,6 +28,7 @@ namespace EduSpark.API
             });
 
             builder.Services.AddControllers();
+            builder.Services.AddHttpContextAccessor();
             builder.Services.AddAuthentication("Bearer")
             .AddJwtBearer("Bearer", options =>
             {
@@ -50,6 +51,7 @@ namespace EduSpark.API
 
             builder.Services.AddScoped<IVideoRequestRepository, VideoRequestRepository>();
             builder.Services.AddScoped<IVideoRequestService, VideoRequestService>();
+            builder.Services.AddScoped<IUserClaims, UserClaims>();
             // Swagger
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
