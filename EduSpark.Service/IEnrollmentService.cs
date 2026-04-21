@@ -11,7 +11,6 @@ namespace EduSpark.Service
         Task<CourseEnrollmentModel> GetEnrollmentAsync(int id);
         Task<List<CourseEnrollmentModel>> GetUserEnrollmentsAsync(int userId);
     }
-
     public class EnrollmentService : IEnrollmentService
     {
         private readonly IEnrollmentRepository _repository;
