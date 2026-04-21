@@ -9,7 +9,7 @@ namespace EduSpark.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize]
+    //[Authorize]
     public class VideoRequestController : ControllerBase
     {
         private readonly IVideoRequestService _videoRequestService;

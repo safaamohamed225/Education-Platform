@@ -1,6 +1,6 @@
-﻿using EduSpark.Core.Data;
-using EduSpark.Core.Entities;
+﻿using EduSpark.Core.Entities;
 using EduSpark.Data;
+using EduSpark.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace EduSpark.Data

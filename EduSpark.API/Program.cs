@@ -1,8 +1,8 @@
-using EduSpark.Data.Entities;
 using EduSpark.Data;
 using EduSpark.Service;
 using Microsoft.EntityFrameworkCore;
 using EduSpark.API.Common;
+using EduSpark.Data.Entities;
 
 namespace EduSpark.API
 {
@@ -28,12 +28,19 @@ namespace EduSpark.API
             });
 
             builder.Services.AddControllers();
+            builder.Services.AddAuthentication("Bearer")
+            .AddJwtBearer("Bearer", options =>
+            {
+                options.Authority = configuration["AzureAdB2C:Authority"];
+                options.Audience = configuration["AzureAdB2C:ClientId"];
+            });
 
             //builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
             builder.Services.AddAutoMapper(cfg =>
             {
                 cfg.AddProfile<MappingProfile>();
             });
+            builder.Services.AddHttpClient();
             // Services & Repositories
             builder.Services.AddScoped<ICourseCategoryRepository, CourseCategoryRepository>();
             builder.Services.AddScoped<ICourseCategoryService, CourseCategoryService>();
@@ -54,7 +61,8 @@ namespace EduSpark.API
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.UseHttpsRedirection();
             app.UseAuthorization();
 
