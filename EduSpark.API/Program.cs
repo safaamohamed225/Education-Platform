@@ -64,6 +64,10 @@ namespace EduSpark.API
             builder.Services.AddScoped<IVideoRequestRepository, VideoRequestRepository>();
             builder.Services.AddScoped<IVideoRequestService, VideoRequestService>();
             builder.Services.AddScoped<IUserClaims, UserClaims>();
+            builder.Services.AddScoped<IAzureBlobStorageService, AzureBlobStorageService>();
+            builder.Services.AddScoped<IEmailNotification, EmailNotification>();
+            builder.Services.AddScoped<IUserProfileRepository, UserProfileRepository>();
+            builder.Services.AddScoped<IUserProfileService, UserProfileService>();
             // Swagger
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Configuration;
 using SendGrid;
 using SendGrid.Helpers.Mail;
-using System.Net.Mail;
 
 namespace EduSpark.Service
 {
@@ -19,11 +18,31 @@ namespace EduSpark.Service
         {
             this.configuration = configuration;
         }
-
-        public Task<Response> SendEmailForContactUs(ContactMessage contactMessage)
+        public async Task<Response> SendEmailForContactUs(ContactMessage contactMessage)
         {
-            throw new NotImplementedException();
+            var apiKey = configuration["SendGrid:SENDGRID_API_KEY"];
+            var from = new EmailAddress(configuration["SendGrid:From"]);
+            var to = new EmailAddress(configuration["SendGrid:From"], "Safa");
+
+            var sendGridMessage = new SendGridMessage()
+            {
+                From = from,
+                ReplyTo = to,
+                Subject = "Contact page: Received a request from user"
+            };
+
+            sendGridMessage.AddContent(MimeType.Html, GetEmailContent(contactMessage));
+            sendGridMessage.AddTo(to);
+
+            Console.WriteLine($"Sending email with payload: \n{sendGridMessage.Serialize()}");
+
+            var response = await new SendGridClient(apiKey).SendEmailAsync(sendGridMessage).ConfigureAwait(false);
+            Console.WriteLine($"Response: {response.StatusCode}");
+            Console.WriteLine(response.Headers);
+
+            return response;
         }
+
 
         private string GetEmailContent(ContactMessage contactMessage)
         {

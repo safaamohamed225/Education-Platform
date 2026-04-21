@@ -73,7 +73,7 @@ namespace EduSpark.Data
                 })
                 .FirstOrDefaultAsync();
 
-            return course;
+            return course!;
         }
 
         public async Task<List<CourseModel>> GetAllCoursesAsync(int? categoryId = null)
@@ -148,7 +148,7 @@ namespace EduSpark.Data
             return await dbContext.Courses
                 .Include(c => c.SessionDetails)
                 //.Include(c => c.Category)
-                .FirstOrDefaultAsync(c => c.CourseId == courseId);
+                .FirstOrDefaultAsync(c => c.CourseId == courseId)!;
         }
         public void RemoveSessionDetail(SessionDetail sessionDetail)
         {
