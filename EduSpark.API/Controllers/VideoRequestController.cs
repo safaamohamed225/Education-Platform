@@ -1,4 +1,5 @@
 ﻿using EduSpark.API.Common;
+using EduSpark.Core.Entities;
 using EduSpark.Core.Models;
 using EduSpark.Service;
 using Microsoft.AspNetCore.Authorization;
@@ -27,8 +28,17 @@ namespace EduSpark.API.Controllers
         public async Task<ActionResult<IEnumerable<VideoRequestModel>>> GetAll()
         {
             List<VideoRequestModel> videoRequests;
+            var userRoles = _userClaims.GetUserRoles();
 
-            videoRequests = await _videoRequestService.GetAllAsync();
+            if(userRoles.Contains("Admin"))
+            {
+                videoRequests = await _videoRequestService.GetAllAsync();
+            }
+            else
+            {
+                var videoRequest = await _videoRequestService.GetByUserIdAsync(_userClaims.GetUserId());
+                videoRequests = videoRequest.ToList();
+            }
 
             return Ok(videoRequests);
         }
